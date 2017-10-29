@@ -8,12 +8,12 @@
 {% block content %}
 <h2>Posts:</h2>
         <ol>
-            {% for object in category_list %}
+            {% for object in posts_list %}
                 <li>
-                    <a href="{{ object.href }}">{{ object }}</a>
+                    <a href="{{ object.get_absolute_url }}"> {{ posts.title|upper }}</a>
                 </li>
             {% empty %}
-                <li>Empty category</li>
+                <li>There is no posts</li>
             {% endfor %}
         </ol>
 

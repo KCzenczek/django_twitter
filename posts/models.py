@@ -1,14 +1,15 @@
 from django.db import models
 from django.urls import reverse
 from django_twitter.user_messages.models import User
+from django_twitter.comments.models import Comment
 
 
-class Posts(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=128)
     author = models.ForeignKey(User)
     content = models.TextField()
     date_added = models.DateField()
-    comments = models.ManyToManyField(Comments)
+    comments = models.ManyToManyField(Comment)
 
     def __str__(self):
         return self.title

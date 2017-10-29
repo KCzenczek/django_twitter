@@ -2,11 +2,23 @@
 
 
 {% block header %}
-
+    Post
 {% endblock header %}
 
 
 {% block content %}
+    <h2>Post title: {{ post.title }}</h2>
+    <h3>Author: {{ post.author }}</h3>
+    <h3>Content: {{ post.content }}</h3>
+    <h3>Date: {{ post.date_added }}</h3>
+    <h4>Comments</h4>
+    <ul>
+    {% for comment in comment_list %}
+    <li>{{ comment.content }}</li>
+    {% empty %}
+    <li>Brak uczniów</li>
+    {% endfor %}
+</ul>
 
 {% endblock content %}
 
@@ -16,5 +28,3 @@
 
 {% endblock footer %}
 
-</body>
-</html>
