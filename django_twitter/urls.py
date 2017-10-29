@@ -23,7 +23,7 @@ urlpatterns = [
 
     url(r'^comments/', include('comments.urls')),
 
-    url(r'^messages/', include('messages.urls')),
+    url(r'^user_messages/', include('user_messages.urls')),
 
     url(r'^users/', include('users.urls')),
 
