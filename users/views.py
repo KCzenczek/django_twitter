@@ -1,4 +1,4 @@
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -7,6 +7,7 @@ from django.urls import reverse
 from django.views import View
 
 from users.forms import LoginForm
+from users.models import TwitterUser
 
 
 class LoginView(View):
@@ -31,7 +32,14 @@ class LoginView(View):
         
 
 class LogoutView(View):
-    class LogoutView(View):
-        def get(self, request):
-            logout(request)
-            return redirect('/')
+    def get(self, request):
+        logout(request)
+        return redirect('/')
+
+
+class UserDetailedView(View):
+    def get(self, request, pk):
+        user = TwitterUser.objects.get(id=pk)
+        return TemplateResponse(request, 'users/user_detail.html', {
+            'user': user,
+        })

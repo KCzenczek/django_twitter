@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detail User
+{% endblock %}
+
+
+{% block header %}
+<h2>Detail User</h2>
+{% endblock %}
+{% block content %}
+    <strong>Username</strong> {{ user.username }}
+    <strong>First name</strong> {{ user.first_name }}
+    <strong>Last name</strong> {{ user.last_name }}
+    <strong>Email</strong> {{ user.email }}
+    <a href="{% url 'user-massages-list' %}">List od message</a>
+{% endblock %}

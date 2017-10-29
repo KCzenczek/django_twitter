@@ -24,3 +24,4 @@ class LoginForm(forms.Form):
         self.user = user
 
         return cleaned_data
+
