@@ -1,8 +1,8 @@
 from django.db import models
 from django.urls import reverse
-
 from django.contrib.auth import get_user_model
-from django_twitter.comments.models import Comment
+
+from comments.models import Comment
 
 User = get_user_model()
 

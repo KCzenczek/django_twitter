@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django_twitter.posts import views
+from posts import views
 
 
 urlpatterns = [
