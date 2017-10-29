@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    All your posts | {{ block.super}}
+{% endblock %}
+
+
+{% block content %}
+<h2>Posts:</h2>
+        <ol>
+            {% for object in category_list %}
+                <li>
+                    <a href="{{ object.href }}">{{ object }}</a>
+                </li>
+            {% empty %}
+                <li>Empty category</li>
+            {% endfor %}
+        </ol>
+
+{% endblock %}
