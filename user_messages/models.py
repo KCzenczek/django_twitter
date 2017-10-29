@@ -1,3 +1,4 @@
+from django.shortcuts import reverse
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -31,4 +32,4 @@ class UserMessage(models.Model):
         return reverse('message-delete')
 
     def get_details_url(self):
-        return
+        return reverse('message-delete')
