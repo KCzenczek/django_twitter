@@ -127,3 +127,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# linijka z naszymi ustawieniami
+AUTH_USER_MODEL = 'users.TwitterUser'
