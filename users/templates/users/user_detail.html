@@ -13,5 +13,6 @@
     <strong>First name</strong> {{ user.first_name }}
     <strong>Last name</strong> {{ user.last_name }}
     <strong>Email</strong> {{ user.email }}
-    <a href="{% url 'user-massages-list' %}">List od message</a>
+    <a href="{% url 'user-massages-list' %}">List of messages</a>
+    <a href="{% url 'message-send' %}">Send messages</a>
 {% endblock %}
